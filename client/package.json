@@ -1,0 +1,76 @@
+{
+  "name": "slack-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --hot --inline --port 3000",
+    "build": "cross-env NODE_ENV=production webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuchiu/Slack-JavaScript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuchiu/Slack-JavaScript/issues"
+  },
+  "homepage": "https://github.com/yuchiu/Slack-JavaScript#readme",
+  "dependencies": {
+    "autoprefixer": "^9.4.3"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "css-loader": "^0.28.7",
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.13.0",
+    "style-loader": "^0.23.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.6.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.6",
+    "open-browser-webpack-plugin": "0.0.5",
+    "prettier": "^1.14.0",
+    "sass-loader": "^6.0.6",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack": "4.19.1",
+    "webpack-cli": "3.1.0",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "eslintConfig": {
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "extends": [
+      "airbnb-base",
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "double"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "no-console": 0,
+      "no-unused-vars": 0,
+      "import/prefer-default-export": 0,
+      "no-underscore-dangle": 0,
+      "consistent-return": 0
+    }
+  }
+}
