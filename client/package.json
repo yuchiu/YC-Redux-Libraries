@@ -19,9 +19,16 @@
   },
   "homepage": "https://github.com/yuchiu/Slack-JavaScript#readme",
   "dependencies": {
-    "autoprefixer": "^9.4.3"
+    "autoprefixer": "^9.4.3",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
     "cross-env": "^5.2.0",
     "css-loader": "^0.28.7",
     "eslint": "^5.2.0",
@@ -29,23 +36,32 @@
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.13.0",
-    "style-loader": "^0.23.1",
     "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.12.3",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.6.0",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.5.3",
-    "postcss-loader": "^2.0.6",
     "open-browser-webpack-plugin": "0.0.5",
+    "postcss-loader": "^2.0.6",
     "prettier": "^1.14.0",
     "sass-loader": "^6.0.6",
+    "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.1.1",
     "webpack": "4.19.1",
     "webpack-cli": "3.1.0",
     "webpack-dev-server": "^3.1.14"
   },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
   "eslintConfig": {
+    "parser": "babel-eslint",
     "env": {
+      "browser": true,
       "jest": true,
       "node": true
     },
@@ -53,6 +69,13 @@
       "airbnb-base",
       "plugin:prettier/recommended"
     ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true,
+        "modules": true,
+        "experimentalObjectRestSpread": true
+      }
+    },
     "rules": {
       "linebreak-style": [
         "error",

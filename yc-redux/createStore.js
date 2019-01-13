@@ -15,7 +15,7 @@ const createStore = reducer => {
 
   const dispatch = action => {
     currentState = reducer(currentState, action);
-    currentListeners.forEach(f => f());
+    currentListeners.forEach(func => func());
     return action;
   };
 
