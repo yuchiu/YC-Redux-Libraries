@@ -1,8 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import "./testMyRedux";
+import { createStore } from "../../yc-redux";
+import { Provider } from "../../yc-react-redux";
+import couterReducer from "./reducers/counterReducer";
+import Counter from "./components/Counter";
 
-const title = "My Minimal React Webpack Babel Setup";
+const store = createStore(couterReducer);
 
-ReactDOM.render(<div>{title}</div>, document.getElementById("app"));
+const App = (
+  <Provider store={store}>
+    <Counter />
+  </Provider>
+);
+
+ReactDOM.render(App, document.getElementById("app"));
