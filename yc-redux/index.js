@@ -1,3 +1,3 @@
-import createStore from "./createStore";
+import createStore from "./components/createStore";
 
 export { createStore };

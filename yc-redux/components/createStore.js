@@ -1,5 +1,5 @@
 
-import isFunction from "./utils/isFunction";
+import isFunction from "../utils/isFunction";
 
 const createStore = reducer => {
   let currentState = {};
