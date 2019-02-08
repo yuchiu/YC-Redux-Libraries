@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import dotenv from "dotenv";
-import { Provider } from "react-redux";
-
+import { Provider } from "./lib/yc-react-redux";
 import { createStore } from "./lib/yc-redux";
+
 import Routes from "./components";
 import * as serviceWorker from "./serviceWorker";
 import counterReducer from "./reducers/counter.reducer";
