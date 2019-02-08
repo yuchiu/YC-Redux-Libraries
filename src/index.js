@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import thunk from "redux-thunk";
+import thunk from "./lib/yc-redux-thunk";
 import { createStore, applyMiddleware } from "./lib/yc-redux";
 import { Provider } from "./lib/yc-react-redux";
 
