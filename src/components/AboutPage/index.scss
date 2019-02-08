@@ -1,0 +1,48 @@
+@import "../../assets/css/vars.scss";
+.about-page-wrapper {
+  width: 90%;
+  margin: auto;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  &__item {
+    margin: 5px;
+  }
+  &__name {
+    margin: 20px;
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+  &__title {
+  }
+  &__desc {
+  }
+  &__contacts {
+  }
+}
+
+@media screen and (min-width: $MQ600Min) {
+  .about-page-wrapper {
+    width: 70%;
+  }
+  .about {
+    &__img {
+      width: 500px;
+    }
+  }
+}
+
+@media screen and (min-width: $MQ1200Min) {
+  .about-page-wrapper {
+    width: 50%;
+  }
+  .about {
+    &__img {
+      width: 600px;
+    }
+  }
+}

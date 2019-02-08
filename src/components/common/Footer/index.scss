@@ -1,0 +1,15 @@
+@import "../../../assets/css/vars.scss";
+
+.footer-wrapper {
+  width: 100%;
+  height: $footerHeight;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-item {
+  text-align: center;
+  padding: 10px;
+  &--link {
+    color: $darkgrey;
+  }
+}
