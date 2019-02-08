@@ -1,11 +1,3 @@
-#build
-dist
-build
-
-# editor
-.vs
-.vscode
-
 # Logs
 logs
 *.log
@@ -62,17 +54,8 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
-# parcel-bundler cache (https://parceljs.org/)
-.cache
+# dotenv environment variables file
+.env
 
 # next.js build output
 .next
-
-# nuxt.js build output
-.nuxt
-
-# vuepress build output
-.vuepress/dist
-
-# Serverless directories
-.serverless# Logs

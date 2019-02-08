@@ -1,3 +1,4 @@
-import Provider from "./components/Provider";
+import connect from "./components/connect"
+import Provider from "./components/Provider"
 
-export { Provider };
+export {connect , Provider}
