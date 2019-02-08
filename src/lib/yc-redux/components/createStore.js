@@ -1,7 +1,10 @@
 import createUUID from "../utils/createUUID";
 import isFunction from "../utils/isFunction";
 
-const createStore = reducer => {
+const createStore = (reducer, middleware) => {
+  if (middleware) {
+    return middleware(createStore)(reducer);
+  }
   let currentState = {};
   const currentListeners = [];
 

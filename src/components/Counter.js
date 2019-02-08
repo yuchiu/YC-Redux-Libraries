@@ -10,6 +10,7 @@ class Counter extends React.Component {
         <h2>counter: {this.props.count}</h2>
         <button onClick={this.props.addCount}>Add</button>
         <button onClick={this.props.minusCount}>Minus</button>
+        <button onClick={this.props.addCountAsync}>Add Async</button>
       </div>
     );
   }
@@ -20,7 +21,8 @@ const stateToProps = state => ({
 
 const dispatchToProps = {
   addCount: counterAction.addCount,
-  minusCount: counterAction.minusCount
+  minusCount: counterAction.minusCount,
+  addCountAsync: counterAction.addCountAsync
 };
 
 export default connect(
