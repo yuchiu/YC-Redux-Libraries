@@ -1,11 +1,13 @@
-const bindActionCreator =(creator, dispatch)=>{
-	return (...args) => dispatch(creator(...args))
-}
-const bindActionCreators =(creators,dispatch)=>{
-	return Object.keys(creators).reduce((ret,item)=>{
-		ret[item] = bindActionCreator(creators[item],dispatch)
-		return ret
-	},{})
-}
+const bindActionCreator = (creator, dispatch) => (...args) =>
+  dispatch(creator(...args));
 
-export default bindActionCreators
+const bindActionCreators = (creators, dispatch) => {
+  const bound = {};
+  Object.keys(creators).forEach(actionFunc => {
+    const creator = creators[actionFunc];
+    bound[actionFunc] = bindActionCreator(creator, dispatch);
+  });
+  return bound;
+};
+
+export default bindActionCreators;

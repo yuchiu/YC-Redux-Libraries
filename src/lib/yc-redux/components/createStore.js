@@ -1,3 +1,4 @@
+import createUUID from "../utils/createUUID";
 import isFunction from "../utils/isFunction";
 
 const createStore = reducer => {
@@ -19,7 +20,7 @@ const createStore = reducer => {
   };
 
   // using an unique type for initiallizing createStore's state with dispatch
-  dispatch({ type: "@YC-REDUX/GENISIS-DISPATCH" });
+  dispatch({ type: `GENISIS-DISPATCH-${createUUID()}` });
   return { getState, subscribe, dispatch };
 };
 

@@ -1,11 +1,34 @@
-export function counter(state=0, action) {
-  console.log(`state:${state}`, action);
+const initialState = {
+  count: 0
+};
+
+export const countReducer = (state = initialState, action) => {
+  const newState = { ...state };
   switch (action.type) {
-    case 'ADD_COUNT':
-      return state + 1
-    case 'MINUS_COUNT':
-      return state - 1
+    case "ADD_COUNT":
+      newState.count += 1;
+      console.log(
+        `previous state: `,
+        state,
+        `\naction: `,
+        action,
+        `\ncurrent state: `,
+        newState
+      );
+      return newState;
+    case "MINUS_COUNT":
+      newState.count -= 1;
+      console.log(
+        `previous state: `,
+        state,
+        `\naction: `,
+        action,
+        `\ncurrent state: `,
+        newState
+      );
+      return newState;
     default:
-      return 10
+      console.log(`action: `, action, `\ncurrent state: `, state);
+      return initialState;
   }
-}
+};
